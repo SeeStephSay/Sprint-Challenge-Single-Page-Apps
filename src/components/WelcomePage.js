@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import Header from './Header';
-import classes from '*.module.css';
+import { Button } from 'reactstrap';
 
 export default function WelcomePage() {
 	return (
@@ -14,7 +14,7 @@ export default function WelcomePage() {
 							<p>ALL ABOUT RICK AND MORTY</p>
 						</div>
 						<Link to='/LocationsList'>
-							<Button className={classes.margin}>Character</Button>
+							<Button className='margin'>Character</Button>
 						</Link>
 					</div>
 				</header>
