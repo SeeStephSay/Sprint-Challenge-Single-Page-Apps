@@ -21,7 +21,7 @@ export default function SearchForm() {
 	);
 
 	const handleChange = (event) => {
-		setData(event.target.value);
+		setQuery(event.target.value);
 	};
 
 	// return <section className='search-form'>// Add a search form here</section>;

@@ -14,11 +14,7 @@ export default function WelcomePage() {
 						cynical mad scientist Rick Sanchez and his good-hearted but fretful grandson Morty Smith, who split their
 						time between domestic life and interdimensional adventures.
 					</p>
-					<p>
-						The series originated from an animated short parody film of Back to the Future, created by Roiland for
-						Channel 101, a short film festival co-founded by Harmon. The series has been acclaimed by critics for its
-						originality, creativity and humor.
-					</p>
+					<p>The series has been acclaimed by critics for its originality, creativity and humor.</p>
 					<Link to='/Characters'>
 						<Button color='primary'>Characters</Button>
 					</Link>
