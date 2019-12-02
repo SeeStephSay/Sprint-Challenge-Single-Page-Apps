@@ -25,9 +25,11 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ]  Explain benefit(s) using `client-side routing`?
+- [ ]  Explain the benefit(s) of using `client-side routing`?
 
 > Answer:
+
+Even though the initial loading time of a site with client-side routing takes a little longer to start, the time between views tends to be faster, and makes for smooth animations and transmissions as well. Client-side routing requires less data to be processed each time, which means that the site isn't pinging a server every time something updates on the user's screen. Instead of reloading the entire webpage each time it needs updating, client-side routing changes the state of the app, which results in a different "view" coming up, like a new component, or even a new request for different data from the server.
 
 ## Project Set Up
 
