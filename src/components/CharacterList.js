@@ -11,7 +11,7 @@ export default function CharacterList() {
 	useEffect(() => {
 		const getCharacters = () => {
 			axios
-				.get(/* API LINK HERE */)
+				.get("https://rickandmortyapi.com/api/character/")
 				.then((response) => {
 					setCharacter(response.data.results);
 					console.log('Data results: ', response);

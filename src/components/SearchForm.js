@@ -9,7 +9,7 @@ export default function SearchForm() {
 
 	useEffect(
 		() => {
-			axios.get(/*API LINK HERE*/).then((response) => {
+			axios.get('https://rickandmortyapi.com/api/character/').then((response) => {
 				const characters = response.data.results.filter((char) =>
 					char.name.toLowerCase().includes(query.toLowerCase()),
 				);
@@ -28,9 +28,6 @@ export default function SearchForm() {
 			<form>
 				<label htmlFor='name'>Learn About Us: </label>
 				<input id='name' type='text' name='textfield' placeholder='Search' value={query} onChange={handleChange} />
-				<Link to='/'>
-					<button>Home</button>
-				</Link>
 			</form>
 
 			{data.map((char) => {
