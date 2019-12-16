@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
 import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
 
 export default function SearchForm() {
 	const [ data, setData ] = useState([]);
@@ -28,6 +29,9 @@ export default function SearchForm() {
 			<form>
 				<label htmlFor='name'>Learn About Us: </label>
 				<input id='name' type='text' name='textfield' placeholder='Search' value={query} onChange={handleChange} />
+				{/*<Link to='/'>
+					<Button>Home</Button>
+  </Link>*/}
 			</form>
 
 			{data.map((char) => {
