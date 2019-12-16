@@ -1,10 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import CharacterCard from './CharacterCard';
+import { Link } from 'react-router-dom';
 
 export default function SearchForm() {
- 
-  return (
-    <section className="search-form">
-     // Add a search form here
-    </section>
-  );
+	const [ data, setData ] = useState([]);
+	const [ query, setQuery ] = useState('');
+
+	useEffect(
+		() => {
+			axios.get(/*API LINK HERE*/).then((response) => {
+				const characters = response.data.results.filter((char) =>
+					char.name.toLowerCase().includes(query.toLowerCase()),
+				);
+				setData(characters);
+			});
+		},
+		[ query ],
+	);
+
+	const handleChange = (event) => {
+		setQuery(event.target.value);
+	};
+
+	return (
+		<section className='search-form'>
+			<form>
+				<label htmlFor='name'>Learn About Us: </label>
+				<input id='name' type='text' name='textfield' placeholder='Search' value={query} onChange={handleChange} />
+				<Link to='/'>
+					<button>Home</button>
+				</Link>
+			</form>
+
+			{data.map((char) => {
+				return <CharacterCard key={char.id} name={char.name} species={char.species} status={char.status} />;
+			})}
+		</section>
+	);
 }
