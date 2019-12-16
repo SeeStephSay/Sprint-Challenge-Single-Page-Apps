@@ -27,9 +27,6 @@ export default function CharacterList() {
 
 	return (
 		<section className='character-list'>
-			<Link to='/'>
-				<Button color='info'>Home</Button>
-			</Link>
 			<Link to='/search'>
 				<Button color='warning'>Search</Button>
 			</Link>

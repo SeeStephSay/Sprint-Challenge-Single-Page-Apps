@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText } from 'reactstrap';
+import SearchForm from './SearchForm';
 
 export default function Header(props) {
 	return (
@@ -9,6 +10,9 @@ export default function Header(props) {
 				<Nav className='mr-auto' navbar>
 					<NavItem>
 						<NavLink href='/characters/'>They're Real "Characters"</NavLink>
+					</NavItem>
+					<NavItem>
+						<SearchForm />
 					</NavItem>
 				</Nav>
 				<NavbarText>I’m Pickle Riiiick!</NavbarText>
